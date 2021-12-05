@@ -1,11 +1,11 @@
 class TwelveDaysOfXmas {
 	tails = {
-		t1: '',
-		t2: 'My true love gave to me:'
-	}
+		t1: "",
+		t2: "My true love gave to me:",
+	};
 
 	output = `On the first day of Christmas
-	${this.tails.t2}
+	#t2
 	A partridge in a pear tree.
 	
 	On the second day of Christmas
@@ -119,7 +119,8 @@ class TwelveDaysOfXmas {
 	And a partridge in a pear tree.`;
 
 	song() {
-		return this.output;
+		const compressed = this.output.replace("#t2", this.tails.t2);
+		return compressed;
 	}
 }
 

@@ -138,6 +138,10 @@ describe("Twelve Days of Xmas", () => {
 	});
 
 	it("TwelveDaysOfXmas() output is less than non-computed song", () => {
-		expect(TDX.output.split(" ")).toBeLessThan(output.split(" "));
+		expect(TDX.output.split(" ").length).toBeLessThan(output.split(" ").length);
+	});
+
+	it("TwelveDaysOfXmas() is the smallest program I can come up with", () => {
+		expect(TDX.output.split(" ").length).toBeLessThan(output.split(" ").length);
 	});
 });
