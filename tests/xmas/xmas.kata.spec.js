@@ -142,6 +142,7 @@ describe("Twelve Days of Xmas", () => {
 	});
 
 	it("TwelveDaysOfXmas() is the smallest program I can come up with", () => {
-		expect(TDX.output.split(" ").length).toBeLessThan(output.split(" ").length);
+		console.log(TDX.output.length);
+		expect(TDX.output.length).toBeLessThan(200);
 	});
 });
