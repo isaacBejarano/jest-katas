@@ -135,6 +135,7 @@ describe("Twelve Days of Xmas", () => {
 
 	it("TwelveDaysOfXmas() outputs the full song", () => {
 		expect(TDX.song()).toEqual(output);
+		console.log(TDX.song());
 	});
 
 	it("TwelveDaysOfXmas() output is less than non-computed song", () => {
