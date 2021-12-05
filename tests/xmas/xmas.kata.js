@@ -1,3 +1,3 @@
-function TwelveDaysOfXmas(){
-	
-}
+function TwelveDaysOfXmas() {}
+
+module.exports = TwelveDaysOfXmas;

@@ -1,7 +1,7 @@
 const TwelveDaysOfXmas = require("./xmas.kata");
 
 describe("Twelve Days of Xmas", () => {
-	it("TwelveDaysOfXmas() exists"){
-		
-	}
+	it("TwelveDaysOfXmas() exists", () => {
+		expect(TwelveDaysOfXmas).toBeDefined();
+	});
 });
