@@ -1,8 +1,10 @@
 class TwelveDaysOfXmas {
+	paragraphs = 12;
+
 	tails = {
 		T1: {
 			string: "On the #HELPER day of Christmas",
-			helper: [
+			helpers: [
 				"first",
 				"second",
 				"third",
@@ -18,7 +20,9 @@ class TwelveDaysOfXmas {
 			],
 		},
 		T2: "My true love gave to me:",
-		T3: ["A", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"],
+		T3: {
+			helpers: ["A", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"],
+		},
 	};
 
 	partiture = `#T1
@@ -135,25 +139,31 @@ class TwelveDaysOfXmas {
 	Two turtle doves
 	And a partridge in a pear tree.`;
 
-	song() {
-		let compressed = this.partiture;
+	composed = "";
 
-		// T1
-		this.tails.T1.helper.forEach((helper, i) => {
-			compressed =
-				i < 5 ? compressed.replace(/#T1/, this.tails.T1.string) : compressed.replace(/#T1/, this.tails.T1.string + ","); // [i]
-			compressed = compressed.replace(/#HELPER/, helper);
-		});
+	constructor() {
+		this.compose();
+	}
+	
+	compose() {
+		// save input
+		this.composed = this.partiture;
 
-		// T2
-		compressed = compressed.replace(/#T2/g, this.tails.T2);
+		// transform
+		for (let i = 0; i < this.paragraphs; i++) {
+			// T1
+			this.composed =
+				i < 5
+					? this.composed.replace(/#T1/, this.tails.T1.string)
+					: this.composed.replace(/#T1/, this.tails.T1.string + ","); // [i]
+			this.composed = this.composed.replace(/#HELPER/, this.tails.T1.helpers[i]);
 
-		// T3
-		this.tails.T3.forEach(helper => {
-			compressed = compressed.replace(/#T3/, helper);
-		});
+			// T2
+			this.composed = this.composed.replace(/#T2/g, this.tails.T2);
 
-		return compressed.toString();
+			// T3
+			this.composed = this.composed.replace(/#T3/, this.tails.T3.helpers[i]);
+		}
 	}
 }
 

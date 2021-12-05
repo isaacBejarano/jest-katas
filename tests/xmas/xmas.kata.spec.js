@@ -1,6 +1,6 @@
 const TwelveDaysOfXmas = require("./xmas.kata");
 
-const output = `On the first day of Christmas
+const original = `On the first day of Christmas
 	My true love gave to me:
 	A partridge in a pear tree.
 	
@@ -119,27 +119,21 @@ describe("Twelve Days of Xmas", () => {
 
 	beforeEach(() => {
 		TDX = new TwelveDaysOfXmas();
-		TDX.song();
-	});
-
-	afterEach(() => {
-		TDX = new TwelveDaysOfXmas();
-		TDX.song();
 	});
 
 	/* VALIDATIONS */
 
 	it("TwelveDaysOfXmas() exists", () => {
-		expect(TDX.song()).toBeDefined();
+		expect(TDX.compose).toBeDefined();
 	});
 
 	it("TwelveDaysOfXmas() outputs the full song", () => {
-		expect(TDX.song()).toEqual(output);
+		expect(TDX.composed).toEqual(original);
 	});
 
-	it("TwelveDaysOfXmas() output is less than non-computed song", () => {
-		expect(TDX.partiture.split(" ").length).toBeLessThan(output.split(" ").length);
-	});1868
+	it("TwelveDaysOfXmas() partiture is smaller than composed original song", () => {
+		expect(TDX.partiture.length).toBeLessThan(original.length);
+	});
 
 	it("TwelveDaysOfXmas() is the smallest program I can come up with", () => {
 		const lastLength = 1868;
