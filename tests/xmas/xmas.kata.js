@@ -1,6 +1,11 @@
 class TwelveDaysOfXmas {
+	tails = {
+		t1: '',
+		t2: 'My true love gave to me:'
+	}
+
 	output = `On the first day of Christmas
-	My true love gave to me:
+	${this.tails.t2}
 	A partridge in a pear tree.
 	
 	On the second day of Christmas
