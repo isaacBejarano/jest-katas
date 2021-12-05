@@ -142,7 +142,7 @@ describe("Twelve Days of Xmas", () => {
 	});
 
 	it("TwelveDaysOfXmas() is the smallest program I can come up with", () => {
-		const lastLength = 2405;
+		const lastLength = 2195;
 		console.log("LAST LENGTH", TDX.partiture.length);
 		expect(TDX.partiture.length).toBeLessThan(lastLength);
 	});
