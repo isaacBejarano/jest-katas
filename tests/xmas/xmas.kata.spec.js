@@ -1,7 +1,6 @@
 const TwelveDaysOfXmas = require("./xmas.kata");
 
-describe("Twelve Days of Xmas", () => {
-	const output = `On the first day of Christmas
+const output = `On the first day of Christmas
 	My true love gave to me:
 	A partridge in a pear tree.
 	
@@ -115,11 +114,26 @@ describe("Twelve Days of Xmas", () => {
 	Two turtle doves
 	And a partridge in a pear tree.`;
 
+describe("Twelve Days of Xmas", () => {
+	/* SETUP + TEARDOWN */
+
+	beforeEach(() => {
+		TDX = new TwelveDaysOfXmas();
+		TDX.song();
+	});
+
+	afterEach(() => {
+		TDX = new TwelveDaysOfXmas();
+		TDX.song();
+	});
+
+	/* VALIDATIONS */
+
 	it("TwelveDaysOfXmas() exists", () => {
-		expect(TwelveDaysOfXmas()).toBeDefined();
+		expect(TDX.song()).toBeDefined();
 	});
 
 	it("TwelveDaysOfXmas() outputs the full song", () => {
-		expect(TwelveDaysOfXmas()).toMatch(output);
+		expect(TDX.song()).toEqual(output);
 	});
 });
