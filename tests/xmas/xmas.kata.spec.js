@@ -135,15 +135,14 @@ describe("Twelve Days of Xmas", () => {
 
 	it("TwelveDaysOfXmas() outputs the full song", () => {
 		expect(TDX.song()).toEqual(output);
-		console.log(TDX.song());
 	});
 
 	it("TwelveDaysOfXmas() output is less than non-computed song", () => {
 		expect(TDX.partiture.split(" ").length).toBeLessThan(output.split(" ").length);
-	});
+	});1868
 
 	it("TwelveDaysOfXmas() is the smallest program I can come up with", () => {
-		const lastLength = 2195;
+		const lastLength = 1868;
 		console.log("LAST LENGTH", TDX.partiture.length);
 		expect(TDX.partiture.length).toBeLessThan(lastLength);
 	});
