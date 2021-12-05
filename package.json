@@ -1,0 +1,16 @@
+{
+	"name": "tdd-katas",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest --watchAll",
+		"coverage": "jest --coverage"
+	},	
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"jest": "^27.3.1"
+	}
+}
