@@ -4,7 +4,7 @@ class TwelveDaysOfXmas {
 		t2: "My true love gave to me:",
 	};
 
-	output = `On the first day of Christmas
+	partiture = `On the first day of Christmas
 	#t2
 	A partridge in a pear tree.
 	
@@ -119,7 +119,7 @@ class TwelveDaysOfXmas {
 	And a partridge in a pear tree.`;
 
 	song() {
-		const compressed = this.output.replace("#t2", this.tails.t2);
+		const compressed = this.partiture.replace("#t2", this.tails.t2);
 		return compressed;
 	}
 }
