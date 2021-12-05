@@ -14,20 +14,20 @@ class TwelveDaysOfXmas {
 	A partridge in a pear tree.
 	
 	On the third day of Christmas
-	My true love gave to me:
+	#T2
 	Three french hens
 	Two turtle doves and
 	A partridge in a pear tree.
 	
 	On the forth day of Christmas
-	My true love gave to me:
+	#T2
 	Four calling birds
 	Three french hens
 	Two turtle doves and
 	A partridge in a pear tree.
 	
 	On the fifth day of Christmas
-	My true love gave to me:
+	#T2
 	Five golden rings
 	Four calling birds
 	Three french hens
@@ -35,7 +35,7 @@ class TwelveDaysOfXmas {
 	A partridge in a pear tree.
 	
 	On the sixth day of Christmas,
-	My true love gave to me:
+	#T2
 	Six geese a-laying
 	Five golden rings
 	Four calling birds
@@ -44,7 +44,7 @@ class TwelveDaysOfXmas {
 	A partridge in a pear tree.
 	
 	On the seventh day of Christmas,
-	My true love gave to me:
+	#T2
 	Seven swans a-swimming
 	Six geese a-laying
 	Five golden rings
@@ -54,7 +54,7 @@ class TwelveDaysOfXmas {
 	A partridge in a pear tree.
 	
 	On the eight day of Christmas,
-	My true love gave to me:
+	#T2
 	Eight maids a-milking
 	Seven swans a-swimming
 	Six geese a-laying
@@ -65,7 +65,7 @@ class TwelveDaysOfXmas {
 	A partridge in a pear tree.
 	
 	On the ninth day of Christmas,
-	My true love gave to me:
+	#T2
 	Nine ladies dancing
 	Eight maids a-milking
 	Seven swans a-swimming
@@ -77,7 +77,7 @@ class TwelveDaysOfXmas {
 	A partridge in a pear tree.
 	
 	On the tenth day of Christmas,
-	My true love gave to me:
+	#T2
 	Ten lords a-leaping
 	Nine ladies dancing
 	Eight maids a-milking
@@ -90,7 +90,7 @@ class TwelveDaysOfXmas {
 	A partridge in a pear tree.
 	
 	On the eleventh day of Christmas,
-	My true love gave to me:
+	#T2
 	Eleven pipers piping
 	Ten lords a-leaping
 	Nine ladies dancing
@@ -104,7 +104,7 @@ class TwelveDaysOfXmas {
 	A partridge in a pear tree.
 	
 	On the Twelfth day of Christmas,
-	My true love gave to me:
+	#T2
 	Twelve drummers drumming
 	Eleven pipers piping
 	Ten lords a-leaping
@@ -119,8 +119,9 @@ class TwelveDaysOfXmas {
 	And a partridge in a pear tree.`;
 
 	song() {
-		const compressed = this.partiture;
-		return compressed.replace(/#T2/g, 'My true love gave to me:');
+		let partiture = this.partiture;
+		let compressed = partiture.replace(/#T2/g, this.tails.T2);
+		return compressed;
 	}
 }
 
