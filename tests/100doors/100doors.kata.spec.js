@@ -1,6 +1,6 @@
 "use strict";
 
-const HundredDoors = require("./kata.100doors");
+const HundredDoors = require("./100doors.kata");
 let hD = {}; // object
 
 xdescribe("new hundredDoors()", () => {
