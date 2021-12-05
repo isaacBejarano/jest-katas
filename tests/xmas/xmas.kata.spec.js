@@ -136,4 +136,8 @@ describe("Twelve Days of Xmas", () => {
 	it("TwelveDaysOfXmas() outputs the full song", () => {
 		expect(TDX.song()).toEqual(output);
 	});
+
+	it("TwelveDaysOfXmas() output is less than non-computed song", () => {
+		expect(TDX.output.split(" ")).toBeLessThan(output.split(" "));
+	});
 });
