@@ -3,7 +3,7 @@
 const HundredDoors = require("./100doors.kata");
 let hD = {}; // object
 
-xdescribe("new hundredDoors()", () => {
+describe("new hundredDoors()", () => {
 	/* SETUP + TEARDOWN */
 
 	beforeEach(() => {
